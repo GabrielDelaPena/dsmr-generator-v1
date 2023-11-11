@@ -36,6 +36,7 @@ public class Controller {
         return emitter;
     }
 
+
     @GetMapping("/simulator")
     public String p1Simulator() throws InterruptedException {
         return p1Service.p1Simulator();
