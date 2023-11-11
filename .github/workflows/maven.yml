@@ -23,7 +23,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Publish to GitHub Packages
-        run: |
-          echo "${{ secrets.TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          docker tag dsmr-generator:1.0.0 ghcr.io/${{ github.repository_owner | lower }}/dsmr-generator:1.0.0
-          docker push ghcr.io/${{ github.repository_owner | lower }}/dsmr-generator:1.0.0
+        run: mvn deploy
+        env:
+          MAVEN_USERNAME: ${{ github.actor }}
+          MAVEN_PASSWORD: ${{ secrets.TOKEN }}
