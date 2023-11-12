@@ -12,6 +12,7 @@ import java.util.List;
 @RequestMapping("/api/v4/generator")
 @RestController
 public class DataController {
+
     private final DataService dataService;
 
     @Autowired
