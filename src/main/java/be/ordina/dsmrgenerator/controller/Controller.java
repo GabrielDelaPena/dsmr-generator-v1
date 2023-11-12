@@ -38,6 +38,6 @@ public class Controller {
 
     @GetMapping("/simulator")
     public String p1Simulator() throws InterruptedException {
-        return p1Service.p1Simulator();
+        return "Hello World";
     }
 }
