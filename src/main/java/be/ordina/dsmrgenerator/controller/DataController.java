@@ -24,4 +24,5 @@ public class DataController {
     public List<Data> dataSimulator() {
         return dataService.dataGenerator(31);
     }
+
 }
