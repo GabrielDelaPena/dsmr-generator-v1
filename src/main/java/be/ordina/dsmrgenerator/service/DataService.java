@@ -8,7 +8,6 @@ import java.util.List;
 
 @Service
 public class DataService {
-
     public List<Data> dataGenerator(int numData) {
         FakeDataGenerator fakeDataGenerator = new FakeDataGenerator();
         return fakeDataGenerator.generateElectricityMeterData(31);
