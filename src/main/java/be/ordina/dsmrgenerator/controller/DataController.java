@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/generator")
+@RequestMapping("/api/v4/generator")
 @RestController
 public class DataController {
 
@@ -21,7 +21,7 @@ public class DataController {
     }
 
     @GetMapping()
-    public List<Data> p1Simulator() {
+    public List<Data> dataSimulator() {
         return dataService.dataGenerator(31);
     }
 }
