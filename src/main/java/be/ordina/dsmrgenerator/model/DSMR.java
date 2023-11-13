@@ -2,7 +2,7 @@ package be.ordina.dsmrgenerator.model;
 
 import java.time.Instant;
 
-public class Data {
+public class DSMR {
     private String serialNumberElectricityMeter;
     private Instant timestamp;
     private double rate1TotalConsumption;
@@ -30,7 +30,7 @@ public class Data {
     private String message;
     private int otherDevicesOnBus;
 
-    public Data() {
+    public DSMR() {
     }
 
     public String getSerialNumberElectricityMeter() {

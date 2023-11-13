@@ -1,7 +1,7 @@
 package be.ordina.dsmrgenerator.controller;
 
-import be.ordina.dsmrgenerator.model.Data;
-import be.ordina.dsmrgenerator.service.DataService;
+import be.ordina.dsmrgenerator.model.DSMR;
+import be.ordina.dsmrgenerator.service.DSMRService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,18 +11,18 @@ import java.util.List;
 
 @RequestMapping("/api/v4/generator")
 @RestController
-public class DataController {
+public class DSMRController {
 
-    private final DataService dataService;
+    private final DSMRService dataService;
 
     @Autowired
-    public DataController(DataService dataService) {
+    public DSMRController(DSMRService dataService) {
         this.dataService = dataService;
     }
 
     @GetMapping()
-    public List<Data> dataSimulator() {
-        return dataService.dataGenerator(31);
+    public List<DSMR> dataSimulator() {
+        return dataService.dataGenerator();
     }
 
 }
