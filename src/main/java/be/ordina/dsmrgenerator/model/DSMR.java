@@ -240,4 +240,36 @@ public class DSMR {
     public void setOtherDevicesOnBus(int otherDevicesOnBus) {
         this.otherDevicesOnBus = otherDevicesOnBus;
     }
+
+    @Override
+    public String toString() {
+        return "DSMR{" +
+                "serialNumberElectricityMeter='" + serialNumberElectricityMeter + '\'' +
+                ", timestamp=" + timestamp +
+                ", rate1TotalConsumption=" + rate1TotalConsumption +
+                ", rate2TotalConsumption=" + rate2TotalConsumption +
+                ", rate1TotalProduction=" + rate1TotalProduction +
+                ", rate2TotalProduction=" + rate2TotalProduction +
+                ", currentRate=" + currentRate +
+                ", allPhasesConsumption=" + allPhasesConsumption +
+                ", allPhasesProduction=" + allPhasesProduction +
+                ", l1Consumption=" + l1Consumption +
+                ", l2Consumption=" + l2Consumption +
+                ", l3Consumption=" + l3Consumption +
+                ", l1Production=" + l1Production +
+                ", l2Production=" + l2Production +
+                ", l3Production=" + l3Production +
+                ", l1Voltage=" + l1Voltage +
+                ", l2Voltage=" + l2Voltage +
+                ", l3Voltage=" + l3Voltage +
+                ", l1Current=" + l1Current +
+                ", l2Current=" + l2Current +
+                ", l3Current=" + l3Current +
+                ", switchPositionElectricity=" + switchPositionElectricity +
+                ", maxAllowedPowerPerPhase=" + maxAllowedPowerPerPhase +
+                ", maxAllowedCurrentPerPhase=" + maxAllowedCurrentPerPhase +
+                ", message='" + message + '\'' +
+                ", otherDevicesOnBus=" + otherDevicesOnBus +
+                '}';
+    }
 }

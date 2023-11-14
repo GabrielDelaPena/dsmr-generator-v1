@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigInteger;
+import java.util.Base64;
 import java.util.List;
 
 @RequestMapping("/api/v4/generator")
@@ -23,6 +25,12 @@ public class DSMRController {
     @GetMapping()
     public List<DSMR> dataSimulator() {
         return dataService.dataGenerator();
+    }
+
+    @GetMapping("/binary")
+    public String binarySimulator() {
+        List<DSMR> data = dataService.dataGenerator();
+        return dataService.convertToBinaryManually(data);
     }
 
 }
